@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/majd/ontologies/2025/10/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/majd/ontologies/2025/10/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:hotel="http://www.hotelbooking.com/ontology/hotel.owl#">
+    <owl:Ontology rdf:about="http://www.hotelbooking.com/ontology/hotel.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#bookedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#bookedBy">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#handlesReservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#handlesReservation">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Receptionist"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#hasAmenity -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#hasAmenity">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Amenity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#hasRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#hasRoom">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#locatedIn">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#offersService -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#offersService">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#paidBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#paidBy">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#reservesRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#reservesRoom">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#reviewsHotel -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#reviewsHotel">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#worksAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#worksAt">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Staff"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#writtenBy">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <rdfs:range rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#checkInDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#checkInDate">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#checkOutDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#checkOutDate">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#guestEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#guestEmail">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#guestName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#guestName">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#hotelName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#hotelName">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#hotelRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#hotelRating">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#paymentAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#paymentAmount">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#reviewRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#reviewRating">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#reviewText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#reviewText">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#roomNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#roomNumber">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#totalPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#totalPrice">
+        <rdfs:domain rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Amenity -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Amenity"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#BudgetHotel -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#BudgetHotel">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#LuxuryHotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#CashPayment -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#CashPayment">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#OnlinePayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#DoubleRoom -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#DoubleRoom">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SingleRoom"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SuiteRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Guest -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Hotel -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Housekeeper -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Housekeeper">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Staff"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Receptionist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#LaundryService -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#LaundryService">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Location -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Location"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#LuxuryHotel -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#LuxuryHotel">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#OnlinePayment -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#OnlinePayment">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Payment -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Payment"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Receptionist -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Receptionist">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Reservation -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Review -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Room -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#RoomService -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#RoomService">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Service -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Service"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SingleRoom -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SingleRoom">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+        <owl:disjointWith rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SuiteRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Staff -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Staff"/>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SuiteRoom -->
+
+    <owl:Class rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SuiteRoom">
+        <rdfs:subClassOf rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Breakfast -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Breakfast">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Amenity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#FreeWifi -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#FreeWifi">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Amenity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#GuestJumanah -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#GuestJumanah">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+        <hotel:guestEmail>Jumanah@gmail.com</hotel:guestEmail>
+        <hotel:guestName>Jumanah Ahmed</hotel:guestName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#GuestSara -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#GuestSara">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+        <hotel:guestEmail>Sara@gmail.com</hotel:guestEmail>
+        <hotel:guestName>Sara Abdullah</hotel:guestName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#HouseKeeperAli -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#HouseKeeperAli">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Housekeeper"/>
+        <hotel:worksAt rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SeaViewBudgetHotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#JeddahLocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#JeddahLocation">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Location"/>
+        <hotel:hotelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</hotel:hotelRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Jumanah -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Jumanah">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Guest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#LaundryService -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#LaundryService">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#LaundryService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Payment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Payment1">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#CashPayment"/>
+        <hotel:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1600.00</hotel:paymentAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Payment2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Payment2">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#OnlinePayment"/>
+        <hotel:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2500.00</hotel:paymentAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#ReceptionistSara -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#ReceptionistSara">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Receptionist"/>
+        <hotel:worksAt rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SeaViewBudgetHotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Reservation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Reservation1">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <hotel:bookedBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#GuestSara"/>
+        <hotel:paidBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment1"/>
+        <hotel:reservesRoom rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room101"/>
+        <hotel:checkInDate>2025-12-01</hotel:checkInDate>
+        <hotel:checkOutDate>2025-12-05</hotel:checkOutDate>
+        <hotel:totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1600.00</hotel:totalPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Reservation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Reservation2">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Reservation"/>
+        <hotel:bookedBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#GuestJumanah"/>
+        <hotel:paidBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Payment2"/>
+        <hotel:reservesRoom rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Suite501"/>
+        <hotel:checkInDate>2025-12-01</hotel:checkInDate>
+        <hotel:checkOutDate>2025-12-07</hotel:checkOutDate>
+        <hotel:totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2500.00</hotel:totalPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Review1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Review1">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <hotel:reviewsHotel rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SeaViewBudgetHotel"/>
+        <hotel:writtenBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#GuestSara"/>
+        <hotel:reviewRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</hotel:reviewRating>
+        <hotel:reviewText>Clean rooms and friendly staff</hotel:reviewText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Review2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Review2">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Review"/>
+        <hotel:reviewsHotel rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SkyTowerLuxuryHotel"/>
+        <hotel:writtenBy rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#GuestJumanah"/>
+        <hotel:reviewRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</hotel:reviewRating>
+        <hotel:reviewText>Amazing view and great breakfast</hotel:reviewText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#RiyadhLocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#RiyadhLocation">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Room101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Room101">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SingleRoom"/>
+        <hotel:roomNumber>&quot;101&quot;</hotel:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Room201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Room201">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#DoubleRoom"/>
+        <hotel:roomNumber>&quot;201&quot;</hotel:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SeaLaundryService -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SeaLaundryService">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#LaundryService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SeaRoomService -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SeaRoomService">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#RoomService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SeaViewBudgetHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SeaViewBudgetHotel">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#BudgetHotel"/>
+        <hotel:hasAmenity rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Breakfast"/>
+        <hotel:hasAmenity rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#FreeWifi"/>
+        <hotel:hasRoom rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room101"/>
+        <hotel:hasRoom rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Room201"/>
+        <hotel:locatedIn rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#JeddahLocation"/>
+        <hotel:offersService rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SeaLaundryService"/>
+        <hotel:offersService rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SeaRoomService"/>
+        <hotel:hotelName>Sea View Budget Hotel</hotel:hotelName>
+        <hotel:hotelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</hotel:hotelRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SkyRoomService -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SkyRoomService">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#RoomService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SkyTowerLuxuryHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SkyTowerLuxuryHotel">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#LuxuryHotel"/>
+        <hotel:hasAmenity rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#FreeWifi"/>
+        <hotel:hasAmenity rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SwimmingPool"/>
+        <hotel:hasRoom rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Suite501"/>
+        <hotel:locatedIn rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#RiyadhLocation"/>
+        <hotel:offersService rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SkyRoomService"/>
+        <hotel:hotelName>Sky Tower Luxury Hotel</hotel:hotelName>
+        <hotel:hotelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</hotel:hotelRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#Suite501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#Suite501">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#SuiteRoom"/>
+        <hotel:roomNumber>&quot;501&quot;</hotel:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hotelbooking.com/ontology/hotel.owl#SwimmingPool -->
+
+    <owl:NamedIndividual rdf:about="http://www.hotelbooking.com/ontology/hotel.owl#SwimmingPool">
+        <rdf:type rdf:resource="http://www.hotelbooking.com/ontology/hotel.owl#Amenity"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
